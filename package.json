@@ -1,0 +1,26 @@
+{
+  "name": "ict-ui",
+  "type": "module",
+  "scripts": {
+    "test:ui": " tsc && web-test-runner",
+    "test:ui:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\"  \"web-test-runner --watch\"",
+    "test:unit": "tsc && mocha",
+    "test:unit:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"mocha --parallel --watch\""
+  },
+  "devDependencies": {
+    "@esm-bundle/chai": "^4.3.4-fix.0",
+    "@open-wc/testing": "^3.1.8",
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
+    "@web/test-runner": "^0.16.1",
+    "chai": "^4.3.7",
+    "concurrently": "^8.0.1",
+    "mocha": "^10.2.0",
+    "prettier": "^2.8.8",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "lit": "^2.7.4"
+  }
+}
