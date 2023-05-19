@@ -2,7 +2,7 @@ import { html, LitElement } from "lit";
 import { property } from "lit/decorators.js";
 
 export class MyComponent extends LitElement {
-  @property({ type: String })
+  @property({ type: String, noAccessor: true })
   text = "";
 
   render() {

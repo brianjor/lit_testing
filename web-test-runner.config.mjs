@@ -1,5 +1,11 @@
+import { esbuildPlugin } from '@web/dev-server-esbuild';
+
 export default ({
-	files: 'dist/tests/ui/**/*.spec.js',
+	files: './tests/ui/**/*.spec.ts',
+
+	plugins: [
+		esbuildPlugin({ ts: true })
+	],
 
 	nodeResolve: {
 		exportConditions: ['browser', 'development'],

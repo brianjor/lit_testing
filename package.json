@@ -3,8 +3,8 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "test:ui": " tsc && web-test-runner",
-    "test:ui:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\"  \"web-test-runner --watch\"",
+    "test:ui": "wtr",
+    "test:ui:watch": "wtr --watch",
     "test:unit": "tsc && mocha",
     "test:unit:watch": "tsc && concurrently -k -r \"tsc --watch --preserveWatchOutput\" \"mocha --parallel --watch\""
   },
@@ -13,6 +13,7 @@
     "@open-wc/testing": "^3.1.8",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
+    "@web/dev-server-esbuild": "^0.4.1",
     "@web/test-runner": "^0.16.1",
     "chai": "^4.3.7",
     "concurrently": "^8.0.1",
